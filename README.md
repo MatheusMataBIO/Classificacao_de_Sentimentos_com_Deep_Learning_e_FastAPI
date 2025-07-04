@@ -1,0 +1,1 @@
+# Classificacao_de_Sentimentos_com_Deep_Learning_e_FastAPI
