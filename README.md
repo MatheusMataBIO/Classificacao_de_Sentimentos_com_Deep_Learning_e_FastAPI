@@ -17,7 +17,7 @@ Desenvolver uma solução de Machine Learning completa, com foco em NLP:
 
 ## 📊 Dataset
 
-- Dataset com mais de **50.000 avaliações** de produtos  
+- Dataset com mais de **50.000 avaliações** de produtos | acesse: https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews
 - Classes:
   - `Positivo`: score ≥ 4
   - `Negativo`: score ≤ 2  
