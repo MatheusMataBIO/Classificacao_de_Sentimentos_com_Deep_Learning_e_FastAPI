@@ -17,21 +17,21 @@ Desenvolver uma solução de Machine Learning completa, com foco em NLP:
 
 ## 📊 Dataset
 
-- Dataset com mais de **50.000 avaliações** de produtos
+- Dataset com mais de **50.000 avaliações** de produtos  
 - Classes:
   - `Positivo`: score ≥ 4
-  - `Negativo`: score ≤ 2
+  - `Negativo`: score ≤ 2  
 - Avaliações neutras (score = 3) foram descartadas
 
 ## ⚙️ Pipeline
 
-1. Limpeza e padronização de texto
-2. Engenharia de features com TF-IDF
-3. Treinamento de rede neural (Keras)
-4. Exportação de modelo e vetorizador
-5. Criação de API com FastAPI
-6. Deploy no Colab com ngrok
-7. Testes via Swagger ou código
+1. Limpeza e padronização de texto  
+2. Engenharia de features com TF-IDF  
+3. Treinamento de rede neural (Keras)  
+4. Exportação de modelo e vetorizador  
+5. Criação de API com FastAPI  
+6. Deploy no Colab com ngrok  
+7. Testes via Swagger ou código  
 
 ## 🚀 Deploy com FastAPI no Google Colab (via ngrok)
 
@@ -62,32 +62,45 @@ display(HTML(f'<a href="{public_url}/docs" target="_blank"><strong>🔗 Abrir Sw
 
 uvicorn.run(app, host="0.0.0.0", port=8000)
 
-### Teste via Swagger
+Teste via Swagger
+Após rodar a API no Colab, um link público será gerado via ngrok.
 
-- Depois que rodar o código acima clique no link gerado e depois visit que irá abrir o swagger de teste 
-- Clique na parte onde tem o json com "text" e escreva alguma frase (em inglês) e clique em executar no painel abiaxo irá mostrar a classificação e a probabilidade
+Clique nesse link para abrir o Swagger UI (/docs) — uma interface de testes da FastAPI.
 
-Importante antes de testar você tem que criar seu próprio auto token:
+Vá até a rota /predict → clique em "Try it out"
 
-# Autenticação com ngrok (obrigatório para gerar URL pública)
-# Obtenha seu token gratuito em: https://dashboard.ngrok.com/get-started/setup
+No campo JSON com "texto", escreva uma frase em inglês(tem que ser em inglês porque o modelo foi treinado com palavras nesse idioma)
+(ex: "This product is amazing!")
+
+Clique em "Execute"
+
+O resultado mostrará:
+
+✅ Classificação do sentimento (positivo ou negativo)
+
+📈 Probabilidade da previsão
+
+🔐 Autenticação com ngrok
+Antes de executar a API, é necessário configurar seu token de autenticação do ngrok:
+
+# Obtenha seu token gratuito aqui:
+# https://dashboard.ngrok.com/get-started/setup
 
 ngrok.set_auth_token("SEU_AUTHTOKEN_AQUI")
 
-## Tecnologias usadas 
+Tecnologias Utilizadas
 
-Python 3
+Python
 
 TensorFlow / Keras
 
-Scikit-learn
-
-Joblib
+Scikit-learn (TF-IDF)
 
 FastAPI
 
-pyngrok
+Uvicorn
 
 Google Colab
 
+ngrok
 
