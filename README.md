@@ -31,7 +31,7 @@ Desenvolver uma solução de Machine Learning completa, com foco em NLP:
 4. Exportação de modelo e vetorizador  
 5. Criação de API com FastAPI  
 6. Deploy no Colab com ngrok  
-7. Testes via Swagger ou código  
+7. Testes via Swagger  
 
 ## 🚀 Deploy com FastAPI no Google Colab (via ngrok)
 
